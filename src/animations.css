@@ -1,0 +1,74 @@
+@keyframes fadeLoad {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+.logo, .nav-icons, .header, .about-me {
+    animation: fadeLoad 0.5s linear forwards;
+}
+
+@keyframes skillsAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.skills {
+    animation: skillsAnimation 1s ease-in-out forwards;
+}
+
+@keyframes projectsAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.projects, .projects-main {
+    animation: projectsAnimation 1s ease-in-out forwards;
+}
+
+@keyframes contactAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contact, .contact-text, .contact-btn {
+    animation: contactAnimation 1s ease-in-out forwards;
+}
+
+@keyframes copyrightAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.copyright {
+    animation: copyrightAnimation 1s ease-in-out forwards;
+}
+
+

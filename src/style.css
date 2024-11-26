@@ -5,23 +5,24 @@
 }
 
 * {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
-   font-family: Basic;
-   scrollbar-width: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Basic;
+    scrollbar-width: none;
 }
+
 html, body {
-   height: 100%;
-   width: 100%;
+    height: 100%;
+    width: 100%;
+    background: #111;
 }
 
 .main {
     background: #111;
     display: flex;
     justify-content: center;
-    width: 100%;
-    height: auto;
+    width: 100vw;
 }
 
 .portfolio-wrapper {
@@ -30,16 +31,15 @@ html, body {
     height: 100%;
     color: #fff;
     padding: 30px 0;
-    scrollbar-width: none;
+    display: none;
 }
 
 .navbar {
-    /* background: red; */
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
+
 .logo {
     font-size: 25px;
 }
@@ -65,6 +65,10 @@ html, body {
     align-items: center;
     margin-top: 50px;
     gap: 2%;
+}
+
+.header a {
+    text-decoration: none;
 }
 
 .header-image {
@@ -93,12 +97,14 @@ html, body {
 
 .skills {
     width: 100%;
-    height: auto;
-    margin-bottom: 20px;
+    margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    margin-top: 20px;
+}
+
+.skills-wrapper {
+    margin-top: 40px;
 }
 
 .skill-card {
@@ -106,7 +112,6 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: fit-content;
     padding: 7px 13px;
     border-radius: 10px;
     gap: 10px;
@@ -120,9 +125,9 @@ html, body {
 
 .skill-text {
     display: flex;
-    justify-content: left;
     flex-direction: column;
 }
+
 .skill-text h1 {
     font-size: 20px;
 }
@@ -132,12 +137,7 @@ html, body {
     color: #9f9f9f;
 }
 
-.tech-stack {
-    margin-top: 50px;
-    font-size: 50px;
-}
-
-.projects-main {
+.projects-main, .tech-stack {
     font-size: 50px;
 }
 
@@ -146,45 +146,37 @@ html, body {
 }
 
 .projects {
-    height: 100%;
     width: 100%;
 }
 
 .project-card {
     width: 100%;
-    height: auto;
     margin-bottom: 20px;
     margin-top: 35px;
     position: relative;
-
-    &:hover .project-text{
-        transform: translateY(98%);
-        opacity: 0;
-        scale: 0;
-    }
+    overflow: hidden;
 }
 
-
+.project-card:hover .project-text{
+    bottom: 10px;
+    scale: 0;
+}
 
 .project-card img {
     width: 100%;
     filter: grayscale(100%);
     transition: 0.5s;
     cursor: pointer;
-
-    &:hover {
-        filter: grayscale(0%);
-    }
+    object-fit: cover;
 }
 
-
-
+.project-card img:hover {
+    filter: grayscale(0%);
+}
 
 .techs {
     margin-top: 20px;
     display: flex;
-    justify-content: left;
-    align-items: center;
     gap: 10px;
 }
 
@@ -203,7 +195,7 @@ html, body {
     width: 100%;
     position: absolute;
     bottom: 0;
-    transition: 0.3s;
+    transition: 0.4s;
 }
 
 .contact-wrapper {
@@ -212,9 +204,6 @@ html, body {
 
 .contact {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
     gap: 20px;
 }
 
@@ -224,7 +213,6 @@ html, body {
 
 .contact-form {
     width: 80%;
-    height: auto;
 }
 
 .contact-form input {
@@ -234,16 +222,14 @@ html, body {
     width: 70%;
     margin-top: 20px;
     border: none;
-    outline: none;
     border-radius: 3px;
 }
+
 .contact-form textarea {
     margin-top: 20px;
     width: 70%;
     height: 200px;
     resize: none;
-    border: none;
-    outline: none;
     padding: 20px;
 }
 
@@ -253,22 +239,23 @@ html, body {
     flex-direction: column;
     gap: 20px;
 }
+
 .socials h3 {
     margin-top: 20px;
 }
+
 .socials a {
     text-decoration: none;
     color: #f9f9f9;
     font-size: 30px;
 }
+
 .contact-btn {
     padding: 5px 25px;
-    border: none;
     background: #222;
     color: #fff;
     border-radius: 5px;
     margin-top: 20px;
-    border: 1px solid #fff;
     cursor: pointer;
 }
 
@@ -276,7 +263,6 @@ html, body {
     margin-top: 50px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 
 .footer-icons {
@@ -289,7 +275,7 @@ html, body {
     color: #f9f9f9;
 }
 
-.footer-icons i{
+.footer-icons i {
     font-size: 20px;
     cursor: pointer;
     position: relative;
@@ -297,6 +283,7 @@ html, body {
 
 .footer-icons i::after {
     content: var(--tooltip);
+    font-family: Basic;
     width: auto;
     padding: 2px;
     height: 20px;
@@ -304,10 +291,25 @@ html, body {
     top: -20px;
     left: -8px;
     font-size: 15px;
-    font-family: Basic;
     display: none;
 }
 
-.footer-icons i:hover:after {
+.footer-icons i:hover::after {
     display: block;
+}
+
+.preloader {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    overflow: hidden;
+}
+
+.preloader svg {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 150px;
+    width: 150px;
 }
