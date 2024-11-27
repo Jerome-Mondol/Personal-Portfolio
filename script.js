@@ -1,7 +1,7 @@
 function addProjects() {
   const loadProjects = async () => {
     try {
-      const response = await import("../data/projects.js");
+      const response = await import("./data/projects.js");
       const projectParent = document.querySelector(".projects");
 
       if (Array.isArray(response.projects)) {
@@ -59,7 +59,7 @@ addProjects();
 function addSkills() {
   const loadSkills = async () => {
     try {
-      const { skills } = await import("../data/skills.js");
+      const { skills } = await import("./data/skills.js");
 
       const skillsParent = document.querySelector(".skills");
 
