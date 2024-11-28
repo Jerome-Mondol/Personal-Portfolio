@@ -1,0 +1,61 @@
+@media (min-width: 320px) {
+    /* Header */
+    .portfolio-wrapper {
+        width: 100%;
+        padding: 20px;
+    }
+    .name {
+        font-size: 20px;
+    }
+    .work {
+        font-size: 17px;
+    }
+
+    /* Tech Stack */
+    .skill-card {
+        width: 45%;
+    }
+
+    /* projects */
+    .project-text {
+        height: 45%;
+    }
+    .project-text h1 {
+        font-size: 20px;
+    }
+    .project-text p {
+        font-size: 15px;
+    }
+    .techs span {
+        font-size: 15px;
+    }
+    .techs {
+        margin-top: 10px;
+    }
+
+    /* Contact */
+    .contact-form input {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+    .contact-form textarea {
+        width: 100%;
+    }
+
+    .contact-items {
+        margin-top: 20px;
+    }
+    .mail h1, .phone h1 {
+        font-size: 25px;
+    }
+    .mail p, .phone p {
+        font-size: 15px;
+    }
+    .socials i{
+        font-size: 25px;
+    }
+
+
+}

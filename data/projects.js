@@ -13,4 +13,11 @@ export const projects = [
             tags: ["HTML", "CSS", "Javascript", "Tailwind"],
             img: "../images/sample.png"
         },
+        {
+            id: 3,
+            name: "Sample 3",
+            description: "Sample description 3",
+            tags: ["HTML", "CSS", "Javascript", "Tailwind"],
+            img: "../images/sample.png"
+        },
 ]
